@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Mono', monospace;
+}
+
+body, html, .container{
+    width: 100vw;
+    height: 100%;
+}
+body, .navigation {
+    background-image: linear-gradient(90deg, #c898f7 52%, #E0C3FC 100%);
+}
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2.5rem;
+    box-shadow: 0 2px 7px 5px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+
+.logo {
+    width: 3.2rem;
+}
+.tittle, .btn-ctt, .card-id { 
+    color: #fff;
+}
+.btn-ctt {
+    text-decoration: none;
+    padding: 0.8rem 1.4rem;
+    background: #000;
+    border-radius: 10rem;
+    font-weight: 900;
+    transition: 0.5s;
+}
+.btn-ctt:hover {
+    background: #fff;
+    color: #000;
+}
+#pokedex {
+    height: 100%;
+    width: 94%;
+    margin: 5rem auto;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem;
+    padding: 1.5rem;
+    height: 16rem;
+    width: 13rem;
+    border-radius: 1rem;
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.2);
+    text-transform: capitalize;
+}
+.card:hover{
+    animation: card 0.3s linear;
+}
+.card-image{
+    height: 8rem;
+}
+
+.card-id {
+    padding: 0.4rem;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.706);
+}
+
+.fire {
+    background: linear-gradient(to bottom, rgb(240, 39, 39) 0%, rgb(255, 85, 0) 40%, rgb(255, 128, 0) 50%, #f1f1f1 50%);
+}
+.steel {
+    background: linear-gradient(to bottom, #a3a2a2 0%, rgb(196, 196, 196) 40%, rgb(196, 196, 196) 50%, #f1f1f1 50%);
+}
+
+.grass {
+    background: linear-gradient(to bottom, #0bce32 0%, #50fa72 40%, #98d7a5 50%, #f1f1f1 50%);
+}
+
+.electric {
+    background: linear-gradient(to bottom, #ffe100 0%, #ffef72 40%, #fff6b1 50%, #f1f1f1 50%);
+}
+
+.water, .ice {
+    background: linear-gradient(to bottom, #00aeff 0%, #7dd3fa 40%, #d0f0ff 50%, #f1f1f1 50%);
+}
+
+.ground {
+    background: linear-gradient(to bottom, #c76300 0%, #ffb871 40%, #ffeddb 50%, #f1f1f1 50%);
+}
+
+.rock {
+    background: linear-gradient(to bottom, #828278 0%, #a4a4a3 40%, #ebebeb 50%, #f1f1f1 50%);
+}
+
+.fairy {
+    background: linear-gradient(to bottom, #f200ff 0%, #e969ff 40%, #fceaff 50%, #f1f1f1 50%);
+}
+
+.poison {
+    background: linear-gradient(to bottom, #51ff00 0%, #84ff79 40%, #c0ff99 50%, #f1f1f1 50%);
+}
+
+.bug {
+    background: linear-gradient(to bottom, #ffae3c 0%, #fcac3c 40%, #f8d5a3 50%, #f1f1f1 50%);
+}
+
+.dragon {
+    background: linear-gradient(to bottom, #0084ff 0%, #5e96ff 40%, #dee9ff 50%, #f1f1f1 50%);
+}
+
+.psychic {
+    background: linear-gradient(to bottom, #aa00ff 0%, #c77aff 40%, #f7e1ff 50%, #f1f1f1 50%);
+}
+
+.flying {
+    background: linear-gradient(to bottom, #5e96ff 0%, #F5F5F5 40%, #a4c4ff 50%, #f1f1f1 50%);
+}
+
+.fighting {
+    background: linear-gradient(to bottom, #ff6c22 0%, #f9b631 40%, #ffe6b4 50%, #f1f1f1 50%);
+}
+
+.normal {
+    background: linear-gradient(to bottom, #836f4d 0%, #918864 40%, #F5F5F5 50%, #f1f1f1 50%);
+}
+.dark {
+    background: linear-gradient(to bottom, rgb(52, 32, 58) 0%, rgb(116, 116, 116) 40%, rgb(191, 191, 191) 50%, #f1f1f1 50%);
+}
+.ghost {
+    background: linear-gradient(to bottom, rgb(109, 43, 133) 0%, rgb(209, 123, 255) 40%, rgb(229, 172, 255) 50%, #f1f1f1 50%);
+}
+@keyframes card {
+    0% {
+        transform: translateY(0);
+    }
+    25%{
+        transform: translateY(10px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    75% {
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@media (max-width:952px) {
+.btn-ctt {
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    background: #000;
+    border-radius: 10rem;
+    font-weight: 100;
+    transition: 0.5s;
+    text-align: center;
+}
+.btn-ctt:hover {
+    background: #fff;
+    color: #000;
+}
+.navigation {
+    padding: 1rem;
+}
+.tittle {
+    display: none;
+}
+}
